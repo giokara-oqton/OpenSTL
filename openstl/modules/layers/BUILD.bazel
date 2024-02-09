@@ -1,0 +1,20 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "layers",
+    srcs = [
+        "hornet.py",
+        "moganet.py",
+        "poolformer.py",
+        "uniformer.py",
+        "van.py",
+    ],
+    deps = [
+        requirement("timm"),
+        requirement("torch"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

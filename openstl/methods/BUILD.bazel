@@ -1,0 +1,34 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "methods",
+    srcs = [
+        "base_method.py",
+        "convlstm.py",
+        "e3dlstm.py",
+        "mau.py",
+        "mim.py",
+        "mmvp.py",
+        "phydnet.py",
+        "predrnn.py",
+        "predrnnpp.py",
+        "predrnnv2.py",
+        "simvp.py",
+        "swinlstm.py",
+        "tau.py",
+        "wast.py",
+    ],
+    deps = [
+        "//openstl/core",
+        "//openstl/models",
+        "//openstl/modules",
+        "//openstl/utils",
+        requirement("numpy"),
+        requirement("pytorch-lightning"),
+        requirement("torch"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

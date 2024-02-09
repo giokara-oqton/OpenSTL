@@ -8,7 +8,7 @@ from timm.models.mlp_mixer import MixerBlock
 from timm.models.swin_transformer import SwinTransformerBlock, window_partition, window_reverse
 from timm.models.vision_transformer import Block as ViTBlock
 
-from .layers import (HorBlock, ChannelAggregationFFN, MultiOrderGatedAggregation,
+from openstl.modules.layers import (HorBlock, ChannelAggregationFFN, MultiOrderGatedAggregation,
                      PoolFormerBlock, CBlock, SABlock, MixMlp, VANBlock)
 
 

@@ -2,6 +2,7 @@ asynctest
 codecov
 flake8
 isort
+mmcv
 pytest 
 pytest-cov
 pytest-runner

@@ -1,5 +1,5 @@
 import torch
-from .base_method import Base_method
+from openstl.methods.base_method import Base_method
 from openstl.models import MAU_Model
 from openstl.utils import schedule_sampling
 

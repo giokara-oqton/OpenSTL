@@ -1,7 +1,7 @@
 import torch
 
 from openstl.models import SwinLSTM_D_Model, SwinLSTM_B_Model
-from .base_method import Base_method
+from openstl.methods.base_method import Base_method
 
 
 class SwinLSTM_D(Base_method):

@@ -1,0 +1,29 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "modules",
+    srcs = [
+        "convlstm_modules.py",
+        "e3dlstm_modules.py",
+        "mau_modules.py",
+        "mim_modules.py",
+        "mmvp_modules.py",
+        "phydnet_modules.py",
+        "predrnn_modules.py",
+        "predrnnpp_modules.py",
+        "predrnnv2_modules.py",
+        "simvp_modules.py",
+        "swinlstm_modules.py",
+        "wast_modules.py",
+    ],
+    deps = [
+        requirement("numpy"),
+        requirement("scipy"),
+        requirement("timm"),
+        requirement("torch"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

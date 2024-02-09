@@ -1,0 +1,15 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "model_converters",
+    srcs = [
+        "publish_model.py",
+    ],
+    deps = [
+        requirement("torch"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

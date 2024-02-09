@@ -1,0 +1,29 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "utils",
+    srcs = [
+        "callbacks.py",
+        "config_utils.py",
+        "main_utils.py",
+        "mmvp_utils.py",
+        "parser.py",
+        "prednet_utils.py",
+        "predrnn_utils.py",
+        "visualization.py",
+    ],
+    deps = [
+        "//openstl/datasets",
+        requirement("imageio"),
+        requirement("matplotlib"),
+        requirement("numpy"),
+        requirement("opencv-python"),
+        requirement("pytorch_lightning"),
+        requirement("torch"),
+        requirement("torchvision"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

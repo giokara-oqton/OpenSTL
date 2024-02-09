@@ -1,6 +1,6 @@
 import torch
 from openstl.models import MMVP_Model
-from .base_method import Base_method 
+from openstl.methods.base_method import Base_method 
 
 class MMVP(Base_method):
     r"""SimVP

@@ -1,4 +1,4 @@
-from .simvp import SimVP
+from openstl.methods.simvp import SimVP
 from openstl.modules.wast_modules import *
 from openstl.core.drop_scheduler import drop_scheduler
 

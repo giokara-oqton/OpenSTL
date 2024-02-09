@@ -1,6 +1,6 @@
 import torch
 from openstl.models import SimVP_Model
-from .base_method import Base_method
+from openstl.methods.base_method import Base_method
 
 
 class SimVP(Base_method):
