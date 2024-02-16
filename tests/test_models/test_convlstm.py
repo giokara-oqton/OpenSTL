@@ -1,6 +1,6 @@
 import pytest
 
-from openstl.models import convlstm_model
+from openstl.models import ConvLSTM_Model
 
 
 def test_assertion():

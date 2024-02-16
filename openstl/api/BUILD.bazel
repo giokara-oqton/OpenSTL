@@ -4,12 +4,14 @@ load("@pip_deps//:requirements.bzl", "requirement")
 py_library(
     name = "api",
     srcs = [
+        "__init__.py",
         "exp.py",
     ],
     deps = [
         "//openstl/datasets",
         "//openstl/methods",
         "//openstl/utils",
+        requirement("fvcore"),
         requirement("pytorch-lightning"),
         requirement("torch"),
     ],

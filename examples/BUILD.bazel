@@ -15,5 +15,10 @@ py_binary(
     ],
     data = [
         "tutorial.ipynb",
+        "test/test_example.avi",
+        "train/train_example1.avi",
+        "train/train_example2.avi",
+        "val/val_example1.avi",
+        "val/val_example2.avi",
     ]
 )

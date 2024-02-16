@@ -4,6 +4,7 @@ load("@pip_deps//:requirements.bzl", "requirement")
 py_library(
     name = "modules",
     srcs = [
+        "__init__.py",
         "convlstm_modules.py",
         "e3dlstm_modules.py",
         "mau_modules.py",
@@ -18,6 +19,8 @@ py_library(
         "wast_modules.py",
     ],
     deps = [
+        "//openstl/modules/layers",
+        requirement("einops"),
         requirement("numpy"),
         requirement("scipy"),
         requirement("timm"),
