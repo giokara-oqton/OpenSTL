@@ -1,0 +1,28 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "models",
+    srcs = [
+        "__init__.py",
+        "convlstm_model.py",
+        "e3dlstm_model.py",
+        "mau_model.py",
+        "mim_model.py",
+        "mmvp_model.py",
+        "phydnet_model.py",
+        "predrnn_model.py",
+        "predrnnpp_model.py",
+        "predrnnv2_model.py",
+        "simvp_model.py",
+        "swinlstm_model.py",
+    ],
+    deps = [
+        "//openstl/modules",
+        requirement("numpy"),
+        requirement("torch"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

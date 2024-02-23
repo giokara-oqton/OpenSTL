@@ -1,0 +1,18 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "pipelines",
+    srcs = [
+        "transforms.py",
+    ],
+    deps = [
+        requirement("numpy"),
+        requirement("opencv-python"),
+        requirement("torch"),
+        requirement("torchvision"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

@@ -1,5 +1,6 @@
 dask
 decord
+einops
 future
 fvcore
 hickle

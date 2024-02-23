@@ -1,0 +1,24 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "jupyter",
+    srcs = ["jupyter.py"],
+    main = "jupyter.py",
+    deps = [
+        "//openstl/api",
+        "//openstl/utils",
+        requirement("notebook"),
+        requirement("numpy"),
+        requirement("opencv-python"),
+        requirement("torch"),
+    ],
+    data = [
+        "tutorial.ipynb",
+        "test/test_example.avi",
+        "train/train_example1.avi",
+        "train/train_example2.avi",
+        "val/val_example1.avi",
+        "val/val_example2.avi",
+    ]
+)

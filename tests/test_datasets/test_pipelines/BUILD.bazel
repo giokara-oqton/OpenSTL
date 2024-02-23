@@ -1,0 +1,17 @@
+load("@rules_python//python:defs.bzl", "py_test")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+[py_test(
+  name = src[:-3],
+  srcs = [
+    src,
+  ],
+  deps = [
+        "//openstl/models",
+        requirement("pytest"),
+        requirement("torch"),
+  ],
+  visibility = [
+      "//visibility:public",
+  ],
+) for src in glob(['test_*.py'])]

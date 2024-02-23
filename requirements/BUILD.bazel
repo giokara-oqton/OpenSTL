@@ -1,0 +1,9 @@
+filegroup(
+    name = "requirement_files",
+    srcs = [
+        "optional.txt",
+        "runtime.txt",
+        "tests.txt",
+    ],
+    visibility = ["//:__pkg__"],
+)

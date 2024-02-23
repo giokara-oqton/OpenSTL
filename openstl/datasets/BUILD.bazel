@@ -1,0 +1,38 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "datasets",
+    srcs = [
+        "__init__.py",
+        "base_data.py",
+        "dataloader_bair.py",
+        "dataloader_human.py",
+        "dataloader_kinetics.py",
+        "dataloader_kitticaltech.py",
+        "dataloader_kth.py",
+        "dataloader_moving_mnist.py",
+        "dataloader_noisy_moving_mnist.py",
+        "dataloader_taxibj.py",
+        "dataloader_weather.py",
+        "dataloader.py",
+        "dataset_constant.py",
+        "utils.py",
+    ],
+    deps = [
+        "//openstl/datasets/pipelines",
+        requirement("decord"),
+        requirement("hickle"),
+        requirement("numpy"),
+        requirement("opencv-python"),
+        requirement("pytorch-lightning"),
+        requirement("scikit-image"),
+        requirement("tensorflow"),
+        requirement("timm"),
+        requirement("torch"),
+        requirement("xarray"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

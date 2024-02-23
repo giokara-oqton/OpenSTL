@@ -1,9 +1,8 @@
 import torch
-import torch.nn as nn
 from openstl.models import PredRNN_Model
 from openstl.utils import (reshape_patch, reshape_patch_back,
                            reserve_schedule_sampling_exp, schedule_sampling)
-from .base_method import Base_method
+from openstl.methods.base_method import Base_method
 
 
 class PredRNN(Base_method):

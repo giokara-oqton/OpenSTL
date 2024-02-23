@@ -1,4 +1,4 @@
-from .predrnn import PredRNN
+from openstl.methods.predrnn import PredRNN
 from openstl.models import PredRNNv2_Model
 
 

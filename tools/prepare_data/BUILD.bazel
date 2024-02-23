@@ -1,0 +1,32 @@
+load("@rules_python//python:defs.bzl", "py_library")
+load("@pip_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "generate_mmnist",
+    srcs = [
+        "generate_mmnist.py",
+    ],
+    deps = [
+        "//openstl/datasets",
+        requirement("numpy"),
+        requirement("opencv-python"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)
+
+py_binary(
+    name = "resize_image",
+    srcs = [
+        "resize_image.py",
+    ],
+    deps = [
+        requirement("opencv-python"),
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)
+
+# TODO sh binaries

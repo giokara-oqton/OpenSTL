@@ -13,7 +13,7 @@ import torchvision
 from torch import distributed as dist
 
 import openstl
-from .config_utils import Config
+from openstl.utils.config_utils import Config
 
 
 def collect_env():

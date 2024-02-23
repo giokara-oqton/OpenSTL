@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 
-from .simvp import SimVP
+from openstl.methods.simvp import SimVP
 from openstl.models import SimVP_Model
 
 
